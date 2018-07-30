@@ -12,8 +12,6 @@ function movePacman(coins, data, board) {
       y--;
     } else if (path[i] === 'S' && board[y + 1][x] !== 1 && y + 1 < board.length) {
       y++;
-      console.log('y', y)
-
     } else if (path[i] === 'E' && board[y][x + 1] !== 1 && x + 1 < board[0].length) {
       x++;
     } else if (path[i] === 'W' && board[y][x - 1] !== 1 && x - 1 >= 0) {
