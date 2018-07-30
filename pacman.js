@@ -19,15 +19,21 @@
 var fs = require('fs');
 var data = require('./parseData');
 var build = require('./buildBoard');
+var move = require('./movePacman');
 var input = './input.txt';
 
 function pacman(inputFile) {
+  var coins = 0;
   var rawData = fs.readFileSync(inputFile).toString();
   var parsedData = data.parseData(rawData);
   var board = build.buildBoard(parsedData);
+  var res = move.movePacman(coins, parsedData, board);
+  var finalXPos = res[0];
+  var finalYPos = res[1];
+  var coinsCollected = res[2];
 
-  console.log(board);
-  // return [finalXPos, finalYPos, coinsCollected];
+  console.log(finalXPos,finalYPos, coinsCollected);
+  return [finalXPos, finalYPos, coinsCollected];
 }
 
 pacman(input);
