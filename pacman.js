@@ -20,7 +20,7 @@ var fs = require('fs');
 var data = require('./parseData');
 var build = require('./buildBoard');
 var move = require('./movePacman');
-var input = './input.txt';
+var firstTest = './input.txt';
 
 function pacman(inputFile) {
   var coins = 0;
@@ -42,4 +42,8 @@ function pacman(inputFile) {
   
 }
 
-pacman(input);
+console.log(pacman(firstTest));
+
+module.exports = {
+  firstTest: pacman(firstTest),
+}

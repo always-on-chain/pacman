@@ -4,7 +4,7 @@
   "description": "Simple pacman game that collects coins and returns final x and y position and amount of coins collected",
   "main": "pacman.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/waynekwest88/pacman#readme",
   "devDependencies": {
     "jest": "^23.4.2"
+  },
+  "dependencies": {
+    "chai": "^4.1.2"
   }
 }
