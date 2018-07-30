@@ -1,3 +1,4 @@
+
 function parseWalls(walls) {
   var parsedWalls = [];
   walls.forEach((walls) => {
@@ -26,6 +27,4 @@ function parseData(data) {
   return parsedData;
 }
 
-module.exports = {
-  parseData
-}
+module.exports.parseData = parseData;

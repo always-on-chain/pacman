@@ -17,14 +17,16 @@
  */
 
 var fs = require('fs');
-var data = require('./parseData.js');
+var data = require('./parseData');
+var build = require('./buildBoard');
 var input = './input.txt';
 
 function pacman(inputFile) {
   var rawData = fs.readFileSync(inputFile).toString();
   var parsedData = data.parseData(rawData);
+  var board = build.buildBoard(parsedData);
 
-  console.log(parsedData);
+  console.log(board);
   // return [finalXPos, finalYPos, coinsCollected];
 }
 
