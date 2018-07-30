@@ -12,3 +12,5 @@ Simple pacman game that collects coins and returns final x and y position and am
 - The final location of the PAC-MAN (x,y) - using Cartesian coordinate system
 - The number of coins that have been collected across all movements
 
+# Testing 
+- input "npm test" in terminal
