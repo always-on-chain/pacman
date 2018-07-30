@@ -26,14 +26,20 @@ function pacman(inputFile) {
   var coins = 0;
   var rawData = fs.readFileSync(inputFile).toString();
   var parsedData = data.parseData(rawData);
-  var board = build.buildBoard(parsedData);
-  var res = move.movePacman(coins, parsedData, board);
-  var finalXPos = res[0];
-  var finalYPos = res[1];
-  var coinsCollected = res[2];
+  if (parsedData !== 'Error') {
+    var board = build.buildBoard(parsedData);
+    var res = move.movePacman(coins, parsedData, board);
+    var finalXPos = res[0];
+    var finalYPos = res[1];
+    var coinsCollected = res[2];
 
-  console.log(finalXPos,finalYPos, coinsCollected);
-  return [finalXPos, finalYPos, coinsCollected];
+    console.log(finalXPos,finalYPos, coinsCollected);
+    return [finalXPos, finalYPos, coinsCollected];
+  } else {
+    console.log([-1, -1, 0])
+    return [-1, -1, 0]
+  }
+  
 }
 
 pacman(input);
