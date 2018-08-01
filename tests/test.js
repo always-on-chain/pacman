@@ -1,11 +1,11 @@
 var chai = require('chai');
 var should = require('chai').should();
-var pacman = require('./pacman');
-var input1 = './input.txt';
-var input2 = './test2.txt';
-var input3 = './test3.txt';
-var input4 = './test4.txt';
-var input5 = './test5.txt';
+var pacman = require('../pacman');
+var input1 = './tests/input.txt';
+var input2 = './tests/test2.txt';
+var input3 = './tests/test3.txt';
+var input4 = './tests/test4.txt';
+var input5 = './tests/test5.txt';
 
 var firstTest = pacman.pacman(input1);
 var secondTest = pacman.pacman(input2);

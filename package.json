@@ -4,7 +4,7 @@
   "description": "Simple pacman game that collects coins and returns final x and y position and amount of coins collected",
   "main": "pacman.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha tests/test.js"
   },
   "repository": {
     "type": "git",

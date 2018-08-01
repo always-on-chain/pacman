@@ -17,9 +17,9 @@
  */
 
 var fs = require('fs');
-var data = require('./parseData');
-var build = require('./buildBoard');
-var move = require('./movePacman');
+var data = require('./helper-functions/parseData');
+var build = require('./helper-functions/buildBoard');
+var move = require('./helper-functions/movePacman');
 
 function pacman(inputFile) {
   var coins = 0;
@@ -41,6 +41,6 @@ function pacman(inputFile) {
   console.log([finalXPos,finalYPos, coinsCollected]);
   return [finalXPos, finalYPos, coinsCollected];
 }
-// pacman('./test5.txt');
+// pacman('./tests/test5.txt');
 
 module.exports.pacman = pacman;
