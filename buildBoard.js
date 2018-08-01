@@ -4,8 +4,6 @@ function buildBoard(data) {
   var columnsLength = data.dimensions[0];
   var rowsLength = data.dimensions[1];
   var walls = data.walls;
-  var initialXPos = data.initialPos[0];
-  var initialYPos = data.initialPos[1];
 
   for (var i = 0; i < rowsLength; i++) {
     var row = [];
@@ -20,8 +18,6 @@ function buildBoard(data) {
     var y = (rowsLength - 1) - walls[i][1];
     board[y][x] = 1;
   }
-
-  // board[initialYPos][initialXPos]= 'X';
 
   return board;
 }

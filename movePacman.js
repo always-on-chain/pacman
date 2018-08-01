@@ -8,7 +8,6 @@ function movePacman(coins, data, board) {
   var y = yLength - data.initialPos[1];
 
   board[y][x]= 'X';
-  console.log(board)
 
   for (var i = 0; i < path.length; i++) {
     if (path[i] === 'N' && y - 1 >= 0  && board[y - 1][x] !== 1) {
